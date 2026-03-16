@@ -2,131 +2,170 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Student Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siddarth | Full-Stack Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Siddarth, a Full-Stack Developer building responsive web apps, clean user interfaces, and scalable products for real-world impact." />
+  <meta name="keywords" content="Siddarth portfolio, full stack developer, web developer, internships, JavaScript, frontend, backend" />
+  <meta name="author" content="Siddarth" />
+  <meta property="og:title" content="Siddarth | Full-Stack Developer Portfolio" />
+  <meta property="og:description" content="Explore projects, skills, and experience of Siddarth, a developer focused on modern web applications." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://dummyimage.com/1200x630/102a43/f0f4f8.png&text=Siddarth+Portfolio" />
+  <meta name="theme-color" content="#102a43" />
 
-  <link rel="stylesheet" href="style.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <h2 class="logo">SIDDARTH<span> Dev</span></h2>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact" class="btn">Hire Me</a>
-    </nav>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand" aria-label="Go to homepage">Siddarth.dev</a>
+
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="resume.pdf" class="button button-small" download>Download Resume</a>
+    </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero" id="home">
-    <div class="hero-text">
-      <p class="intro">Hello, I’m</p>
-      <h1>SIDDARTH</h1>
-      <h2>A <span>Full Stack Developer</span></h2>
+  <main id="main-content">
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Open to internships and entry-level roles</p>
+          <h1>Siddarth Ravichandran</h1>
+          <p class="hero-role">Full-Stack Developer</p>
+          <p class="hero-copy">
+            Full-Stack Developer focused on creating modern, responsive, and high-performance web applications. I design and build scalable solutions with clean architecture while ensuring an intuitive and seamless user experience. My goal is to develop reliable products that solve real user problems and deliver meaningful digital solutions.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="button">View Projects</a>
+            <a href="#contact" class="button button-ghost">Let's Connect</a>
+          </div>
+          <div class="social-row" aria-label="Social links">
+            <a href="https://github.com/siddarthrajeswari-tech" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
+            <a href="https://www.linkedin.com/in/siddarth-ravichandran-2489b6361/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+            <a href="mailto:siddarth@email.com" aria-label="Send email">Email</a>
+          </div>
+        </div>
 
-      <p class="desc">
-        I’m a student passionate about building modern, responsive web applications.
-      </p>
+        <div class="hero-card reveal" aria-hidden="true">
+          <div class="avatar">SR</div>
+          <p class="stat-number">1</p>
+          <p class="stat-label">Projects completed</p>
+          <p class="stat-number">100%</p>
+          <p class="stat-label">Responsive design focus</p>
+        </div>
+      </div>
+    </section>
 
-      <div class="hero-buttons">
-        <a href="#projects" class="btn primary">View Projects</a>
-        <a href="#contact" class="btn outline">Contact Me</a>
+    <section class="about section" id="about">
+      <div class="container split-grid">
+        <div class="reveal">
+          <p class="section-kicker">About Me</p>
+          <h2>Developer focused on practical impact</h2>
+          <p>
+            I am a computer science student passionate about full-stack product development. I enjoy translating ideas into performant interfaces and maintainable codebases.
+          </p>
+          <p>
+            My strengths are UI implementation, API integration, and turning complex requirements into clean, user-friendly experiences.
+          </p>
+          <div class="tag-list" id="about-tech"></div>
+        </div>
+        <aside class="about-panel reveal" aria-label="Highlights">
+          <h3>Highlights</h3>
+          <ul>
+            <li>Strong foundation in HTML5, CSS3, JavaScript, and Java</li>
+            <li>Hands-on GitHub workflow and collaborative development</li>
+            <li>Fast learner with product-first thinking</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="projects section" id="projects">
+      <div class="container">
+        <p class="section-kicker">Featured Work</p>
+        <h2>Projects</h2>
+        <p class="section-intro">A selection of projects that reflect problem-solving, UI polish, and code quality.</p>
+        <div class="projects-grid" id="projects-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="skills section" id="skills">
+      <div class="container">
+        <p class="section-kicker">Core Capabilities</p>
+        <h2>Skills & Technologies</h2>
+        <div class="skills-grid" id="skills-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <p class="section-kicker">Get In Touch</p>
+          <h2>Let's build something meaningful</h2>
+          <p>
+            I am actively seeking internship and junior developer opportunities. Reach out for collaborations, interviews, or project discussions.
+          </p>
+          <div class="contact-links">
+            <a class="contact-item" href="mailto:siddarth.rajeswari@gmail.com">
+              <span class="contact-label">Gmail</span>
+              <span class="contact-value">siddarth.rajeswari@gmail.com</span>
+            </a>
+            <a class="contact-item" href="https://github.com/siddarthrajeswari-tech" target="_blank" rel="noopener noreferrer">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">https://github.com/siddarthrajeswari-tech</span>
+            </a>
+            <a class="contact-item" href="https://www.linkedin.com/in/siddarth-ravichandran-2489b6361/" target="_blank" rel="noopener noreferrer">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">https://www.linkedin.com/in/siddarth-ravichandran-2489b6361/</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form" action="#" method="post" novalidate>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="button">Send Message</button>
+          <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>&copy; 2026 Siddarth Ravichandran. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#top">Back to Top</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
+  </footer>
 
-    <div class="hero-image">
-      <img src="PROFILE.jpg" alt="Profile Picture">
-    </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section class="about" id="about">
-    <div class="about-container">
-
-      <div class="about-image">
-        <img src="PROFILE.jpg" alt="About Me">
-      </div>
-
-      <div class="about-content">
-        <h2>About Me</h2>
-
-        <p>
-          I am a passionate Computer Science student with a strong interest in web
-          development and modern technologies. I enjoy building clean, responsive,
-          and user-friendly websites using HTML, CSS, and JavaScript.
-        </p>
-
-        <p>
-          As a continuous learner, I focus on improving my problem-solving skills
-          and exploring new tools to create efficient and visually appealing web
-          applications. My goal is to grow as a full-stack developer and work on
-          impactful real-world projects.
-        </p>
-
-        <a href="#contact" class="btn primary">Contact Me</a>
-      </div>
-
-    </div>
-  </section>
-
-  <script src="script.js"></script>
-  <section class="skills simple" id="skills">
-  <h2 class="section-title">Skills</h2>
-
-  <div class="skills-list">
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Java</li>
-    </ul>
-    <ul>
-      <li>Git & GitHub</li>
-      <li>VS Code</li>
-    </ul>
-  </div>
-</section>
-<section class="contact" id="contact">
-  <h2 class="section-title">Contact Me</h2>
-
-  <p class="contact-text">
-    Feel free to reach out to me for collaborations, projects, or opportunities.
-  </p>
-
-  <div class="contact-box">
-    <p><strong>Email:</strong> siddarth@email.com</p>
-    <p><strong>Phone:</strong> +91 6381064805</p>
-    <p><strong>Location:</strong> India</p>
-
-    <p>
-      <strong>GitHub:</strong>
-      <a href="https://github.com/siddarthrajeswari-tech"
-         target="_blank"
-         class="contact-link">
-         github.com/siddarthrajeswari-tech
-      </a>
-    </p>
-
-    <p>
-      <strong>LinkedIn:</strong>
-      <a href="https://www.linkedin.com/in/siddarth-ravichandran-2489b6361/"
-         target="_blank"
-         class="contact-link">
-         linkedin.com/in/siddarth-ravichandran
-      </a>
-    </p>
-  </div>
-</section>
+  <script src="script.js" defer></script>
 </body>
 </html>
