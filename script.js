@@ -1,28 +1,34 @@
 const projects = [
   {
+    title: "Password Strength Checker",
+    type: "Cybersecurity Utility",
+    description: "A security-focused tool that evaluates password quality using length, character diversity, and common pattern checks. It helps users create stronger credentials and understand password hardening best practices.",
+    tech: ["Python", "Linux", "Cybersecurity"]
+  },
+  {
     title: "Portfolio Website",
     type: "Personal Branding",
-    description: "A responsive developer portfolio designed for recruiters, with strong SEO, smooth section transitions, and modern visual hierarchy.",
-    tech: ["HTML5", "CSS3", "JavaScript"],
-    github: "https://github.com/siddarthrajeswari-tech/PORTFOLIO",
-    live: "https://myportfoliostd.netlify.app"
+    description: "A responsive personal portfolio that showcases my cybersecurity role, technical skills, and practical projects with a clean user experience for recruiters.",
+    tech: ["HTML5", "CSS3", "JavaScript"]
   }
 ];
 
 const skills = [
-  { name: "HTML5", level: 95 },
-  { name: "CSS3", level: 92 },
-  { name: "JavaScript", level: 88 },
-  { name: "Java", level: 80 },
-  { name: "Git & GitHub", level: 86 },
-  { name: "Responsive Design", level: 90 }
+  { name: "Python", level: 90 },
+  { name: "Linux", level: 88 },
+  { name: "Cybersecurity Fundamentals", level: 86 },
+  { name: "Threat Analysis", level: 82 },
+  { name: "Incident Response Basics", level: 80 },
+  { name: "Java", level: 84 },
+  { name: "HTML5", level: 90 },
+  { name: "CSS3", level: 88 },
+  { name: "JavaScript", level: 86 }
 ];
 
-const aboutTech = ["HTML5", "CSS3", "JavaScript", "Java", "Git", "GitHub", "VS Code", "REST APIs"];
+const aboutTech = ["Python", "Linux", "Java", "HTML5", "CSS3", "JavaScript", "Cybersecurity", "Password Security", "GitHub", "VS Code"];
 
 function createProjectCard(project) {
   const techMarkup = project.tech.map((item) => `<span>${item}</span>`).join("");
-  const hasLiveDemo = typeof project.live === "string" && project.live.trim() !== "";
 
   return `
     <article class="project-card reveal">
@@ -33,10 +39,6 @@ function createProjectCard(project) {
         <h3>${project.title}</h3>
         <p>${project.description}</p>
         <div class="project-tech">${techMarkup}</div>
-        <div class="project-links">
-          <a href="${project.github}" target="_blank" rel="noopener noreferrer">GitHub</a>
-          ${hasLiveDemo ? `<a href="${project.live}" target="_blank" rel="noopener noreferrer">Live Demo</a>` : ""}
-        </div>
       </div>
     </article>
   `;
@@ -60,6 +62,7 @@ function renderContent() {
   const projectsGrid = document.getElementById("projects-grid");
   const skillsGrid = document.getElementById("skills-grid");
   const techWrap = document.getElementById("about-tech");
+  const projectCount = document.getElementById("project-count");
 
   if (projectsGrid) {
     projectsGrid.innerHTML = projects.map(createProjectCard).join("");
@@ -71,6 +74,10 @@ function renderContent() {
 
   if (techWrap) {
     techWrap.innerHTML = aboutTech.map((item) => `<span class="tag">${item}</span>`).join("");
+  }
+
+  if (projectCount) {
+    projectCount.textContent = String(projects.length);
   }
 }
 
